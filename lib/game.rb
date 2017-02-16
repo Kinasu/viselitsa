@@ -103,7 +103,7 @@ class Game
     letter = UnicodeUtils.upcase(letter)
 
     # Вываливаемся, если игра уже закончена
-    return if @status == :lost || @status == :won
+    return if lost? || won?
 
     # Вываливаемся, если буква уже была
     return if repeated?(letter)
@@ -121,7 +121,7 @@ class Game
       # Увеличиваем количество ошибок
       @errors += 1
 
-      # Меняем статус на проигрыш, еслиигра проиграна
+      # Меняем статус на проигрыш, если игра проиграна
       @status = :lost if lost?
     end
   end
