@@ -1,4 +1,5 @@
 # encoding: utf-8
+current_path = "./" + File.dirname(__FILE__)
 
 # Популярная детская игра, Виселица
 # https://ru.wikipedia.org/wiki/Виселица_(игра)
@@ -12,7 +13,7 @@ VERSION = "Игра виселица, версия 4. (c) Хороший про�
 
 # Создаем экземпляр класса WordReader
 word_reader = WordReader.new
-words_file_name = "data/words.txt"
+words_file_name = current_path + "/data/words.txt"
 word = word_reader.read_from_file(words_file_name)
 
 # Создаем игру и прописываем ее версию с помощью сеттера version=
